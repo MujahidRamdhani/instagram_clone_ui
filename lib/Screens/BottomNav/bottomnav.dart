@@ -25,7 +25,6 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     ProfileScreen(),
   ];
   @override
-
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
@@ -42,9 +41,12 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.plus_app), label: "Post"),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.heart), label: "Heart"),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.profile_circled), label: "Profile"),
+          BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.plus_app), label: "Post"),
+          BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.heart), label: "Heart"),
+          BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.profile_circled), label: "Profile"),
         ],
       ),
       body: IndexedStack(
