@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone_ui/Screens/BottomNav/bottomnav.dart';
 import 'package:instagram_clone_ui/Screens/SignUp/signupscreen.dart';
 import 'package:instagram_clone_ui/Widgets/uihelper.dart';
 
@@ -50,14 +51,19 @@ class _LoginScreenState extends State<LoginScreen> {
           const SizedBox(
             height: 20,
           ),
-          Uihelper.CustomButton(callback: () {}, buttonname: "Log in"),
+          Uihelper.CustomButton(
+              callback: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => BottomNavScreen()));
+              },
+              buttonname: "Log in"),
           const SizedBox(
             height: 20,
           ),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Uihelper.CustomImage(imgurl: "Icon.png"),
             Uihelper.CustomTextButton(
-                text: "Forgot Password?", callback: () {}),
+                callback: () {}, text: "Login with Facebook."),
           ]),
           const SizedBox(
             height: 10,
