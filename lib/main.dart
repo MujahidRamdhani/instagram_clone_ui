@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Instagram Clone UI',
       debugShowCheckedModeBanner: false,
-      theme:ThemeData.dark(),
+      theme: ThemeData.dark(),
       home: SpalahScreen(),
     );
   }

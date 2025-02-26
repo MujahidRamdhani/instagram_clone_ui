@@ -17,7 +17,8 @@ class _SpalahScreenState extends State<SpalahScreen> {
     // TODO: implement initState
     super.initState();
     Timer(Duration(seconds: 3), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => LoginScreen()));
     });
   }
 
