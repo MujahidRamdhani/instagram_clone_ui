@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone_ui/Screens/SignUp/signupscreen.dart';
 import 'package:instagram_clone_ui/Widgets/uihelper.dart';
 
-class LoginScreen extends StatelessWidget {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+class LoginScreen extends StatefulWidget {
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +82,13 @@ class LoginScreen extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                     color: Color.fromRGBO(255, 255, 255, 0.6)),
               ),
-              Uihelper.CustomTextButton(text: "Sign up.", callback: () {}),
+              Uihelper.CustomTextButton(
+                callback: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => SignUpScreen()));
+                },
+                text: "Sign up.",
+              ),
             ],
           )
         ]),

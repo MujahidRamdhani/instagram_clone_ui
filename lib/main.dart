@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone_ui/Screens/Spalah/screen.dart';
+// import 'package:instagram_clone_ui/Screens/Spalah/screen.dart';
 
 void main() {
   runApp(const MyApp());
